@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 from sqlalchemy import Column, DateTime, Float, Integer
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,8 +12,9 @@ class TemperatureReading(Base):
     id = Column(Integer, primary_key=True, index=True)
     sensor_id = Column(Integer, nullable=False)
     temperature = Column(Float, nullable=False)
-    ruid = Column(Float, nullable=False)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    moisture = Column(Float, nullable=False, default=0.0)
+    gas_level = Column(Float, nullable=False, default=0.0)
+    timestamp = Column(DateTime, nullable=False, default=datetime.datetime.now)
 
     class Config:
         orm_mode = True
