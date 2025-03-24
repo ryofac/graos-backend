@@ -12,7 +12,8 @@ class TemperatureReading(Base):
     id = Column(Integer, primary_key=True, index=True)
     sensor_id = Column(Integer, nullable=False)
     temperature = Column(Float, nullable=False)
-    ruid = Column(Float, nullable=False)
+    moisture = Column(Float, nullable=False, default=0.0)
+    gas_level = Column(Float, nullable=False, default=0.0)
     timestamp = Column(DateTime, default=datetime.utcnow)
 
     class Config:
