@@ -10,5 +10,4 @@ app = FastAPI(
     docs_url="/docs",
     on_startup=[],
 )
-
 app.include_router(temp_router)

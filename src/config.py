@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     database_url: str
 
     temperature_interval: Tuple[float, float] = (25.0, 40.0)
-    moisture_interval: Tuple[float, float] = (40.0, 80.0)
-    gas_level_interval: Tuple[float, float] = (0.0, 10.0)
+    moisture_interval: Tuple[float, float] = (25.0, 80.0)
+    gas_level_interval: Tuple[float, float] = (3.2, 10.0)
 
     telegram_bot_token: str
     telegram_chat_id: str = "984362796"
